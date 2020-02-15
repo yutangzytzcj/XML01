@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books count="2">
+	<book id="b1" lang="cn">
+		<name>
+			&lt;檀香刑&gt;
+		</name>
+		<!-- author ：作者 
+			 这是一个注释 -->
+		<author>莫言</author>
+	</book>
+	<book lang="cn" id="b2">
+		<name>18岁给我一个姑娘</name>
+		<author>冯唐&amp;朋友</author>
+	</book>
+	<book>
+		<name><![CDATA[<和空姐同居的日子>]]></name>
+		<author>三十</author>
+	</book>
+	<comment>Hello</comment>
+</books>
+
+
+
+
+
+

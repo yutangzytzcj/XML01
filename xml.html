@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New xml</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>XML</h1>
+<p>什么是XML： 可以扩展的标记语言</p>
+<h2>处理节点</h2>
+<p>xml 推荐在第一行，必须写在第一行，可以省略。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+</code></pre>
+
+<h2>标记（标签） tag</h2>
+<p>语法：</p>
+<pre><code>开始标记 &lt;标记名&gt;  
+结束标记    &lt;/标记名&gt;
+</code></pre>
+
+<p>标记规则：</p>
+<ol>
+<li>中文英文都可以作为标记名，建议使用英文</li>
+<li>区分大小写</li>
+<li>开始标记和结束标记要成对使用</li>
+<li>不能交叉嵌套</li>
+<li>一个XML中只有唯一的根标记</li>
+</ol>
+<p>标记名可以扩展
+标记的嵌套关系可以扩展</p>
+<h2>注释 Comment</h2>
+<p>语法：</p>
+<pre><code>&lt;!-- 写啥都行! --&gt;
+</code></pre>
+
+<p>注释不能嵌套使用！！</p>
+<h2>内容 Content</h2>
+<p>语法： 开始标记和结束标记之间的信息称为内容。</p>
+<pre><code>&lt;name&gt;檀香刑&lt;/name&gt;
+&lt;book&gt;&lt;name&gt;檀香刑&lt;/name&gt;&lt;/book&gt;
+&lt;book&gt;
+    &lt;name&gt;檀香刑&lt;/name&gt;
+    &lt;author&gt;莫言&lt;/author&gt;
+&lt;/book&gt;
+</code></pre>
+
+<p>内容：</p>
+<ol>
+<li>文本内容</li>
+<li>标记</li>
+<li>多个标记和文本的混合</li>
+<li>内容是可扩展的！</li>
+</ol>
+<h2>元素 Element</h2>
+<p>语法： </p>
+<pre><code>标记 + 内容 = 元素
+</code></pre>
+
+<ol>
+<li>XML 只有一个根元素</li>
+<li>元素中的元素称为子元素，外层元素称为父元素</li>
+</ol>
+<h2>属性</h2>
+<p>语法：</p>
+<pre><code>&lt;book id=&quot;b1&quot; lang=&quot;cn&quot;&gt;
+&lt;book lang=&quot;cn&quot; id=&quot;b1&quot;&gt;
+</code></pre>
+
+<ol>
+<li>在开始标记上定义元素的属性</li>
+<li>可以定义多个属性</li>
+<li>多个属性不分先后次序</li>
+<li>属性之间需要有空格</li>
+<li>属性名=&quot;属性值&quot; 属性和值之间等号前后不用写空格，属性值必须用 引号 </li>
+</ol>
+<h2>实体 Entity</h2>
+<p>实体： 类似于 Java 的字符串中的转义字符，一些用于替换表示XML语法的字符。 用来解决XML文字解析错误</p>
+<p>常用实体：</p>
+<pre><code>&lt; &amp;lt;
+&gt; &amp;gt;
+&amp; &amp;amp;
+</code></pre>
+
+<h2>CDATA</h2>
+<p>使用CDATA包裹的文本，可以写任何字符，无需进行实体替换</p>
+<pre><code>&lt;![CDATA[ 文本内容 ]]&gt;
+</code></pre>
+
+<h2>XML可扩展性</h2>
+<ol>
+<li>元素（标记）名可以扩展</li>
+<li>元素的嵌套关系可以扩展</li>
+<li>元素的属性可以扩展</li>
+<li>属性名可以扩展</li>
+<li>内容可以扩展</li>
+</ol>
+<p>XML案例：</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;books count=&quot;2&quot;&gt;
+    &lt;book id=&quot;b1&quot; lang=&quot;cn&quot;&gt;
+        &lt;name&gt;
+            &amp;lt;檀香刑&amp;gt;
+        &lt;/name&gt;
+        &lt;!-- author ：作者 
+             这是一个注释 --&gt;
+        &lt;author&gt;莫言&lt;/author&gt;
+    &lt;/book&gt;
+    &lt;book lang=&quot;cn&quot; id=&quot;b2&quot;&gt;
+        &lt;name&gt;18岁给我一个姑娘&lt;/name&gt;
+        &lt;author&gt;冯唐&amp;amp;朋友&lt;/author&gt;
+    &lt;/book&gt;
+    &lt;book&gt;
+        &lt;name&gt;&lt;![CDATA[&lt;和空姐同居的日子&gt;]]&gt;&lt;/name&gt;
+        &lt;author&gt;三十&lt;/author&gt;
+    &lt;/book&gt;
+    &lt;comment&gt;Hello&lt;/comment&gt;
+&lt;/books&gt;
+</code></pre>
+
+<h1>在Java中使用XML</h1>
+<p>Java 业界有API可以读取XML文件。读取以后可以按照元素、属性进行结构分解。</p>
+<p>Dom4J 读作 Dom for J</p>
+<p>Dom4J 的底层</p>
+<pre><code>IO 流 -&gt; W3C Dom -&gt; Dom4J 
+</code></pre>
+
+<h2>利用Maven导入dom4j API</h2>
+<p>得到Dom4j 的maven组件坐标   	</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.dom4j&lt;/groupId&gt;
+    &lt;artifactId&gt;dom4j&lt;/artifactId&gt;
+    &lt;version&gt;2.1.1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p>将组件坐标添加到 pom.xml 文件中</p>
+<pre><code>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;cn.tedu&lt;/groupId&gt;
+  &lt;artifactId&gt;XML01&lt;/artifactId&gt;
+  &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.dom4j&lt;/groupId&gt;
+        &lt;artifactId&gt;dom4j&lt;/artifactId&gt;
+        &lt;version&gt;2.1.1&lt;/version&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+&lt;/project&gt;
+</code></pre>
+
+<h1>Dom4j API 的使用</h1>
+<h2>读取XML</h2>
+<p>Dom4j提供了API将XML文件读取为Dom对象（Document）</p>
+<pre><code>    /*
+     * 使用dom4j读取xml文件
+     */
+    SAXReader reader = new SAXReader();
+
+    //doc=reader.read(文件、文件流)
+    Document doc=
+      reader.read(new File(&quot;books.xml&quot;));
+
+    System.out.println(doc.asXML());
+</code></pre>
+
+<h2>利用Dom API（Document）可以访问Dom树中的数据</h2>
+<ol>
+<li>
+<p>访问根元素</p>
+<pre><code>//读取根元素, Root 根， Element元素
+Element root = doc.getRootElement();
+//输出根元素root中的内容
+System.out.println(&quot;根元素：&quot;);
+System.out.println(root.asXML()); 
+</code></pre>
+
+</li>
+<li>
+<p>可以获取元素中全部的子元素</p>
+<pre><code>List&lt;Element&gt; list=root.elements();
+</code></pre>
+
+</li>
+<li>
+<p>可以获取一批名字一样的子元素</p>
+<pre><code>List&lt;Element&gt; list= root.elements(&quot;book&quot;);
+</code></pre>
+
+</li>
+<li>
+<p>获取一个指定名字的子元素, 适合元素的子元素名字都不同，获取其中的一个子元素时候使用。</p>
+<pre><code>Element e = book.element(&quot;name&quot;);
+</code></pre>
+
+</li>
+<li>
+<p>获取元素中文字内容</p>
+<pre><code>String s1 = name.getText()
+String s2 = name.getTextTrim() //去除前后空白，常用！
+</code></pre>
+
+</li>
+<li>
+<p>获取元素的属性值</p>
+<pre><code>&lt;book id=&quot;b1&quot; &gt;
+
+String s = book.attributeValue(&quot;id&quot;); 
+</code></pre>
+
+</li>
+<li>
+<p>直接获取子元素的文本内容</p>
+<pre><code>String name = book.elementTextTrim(&quot;name&quot;);
+</code></pre>
+
+</li>
+</ol>
+<p>完整演示案例：</p>
+<pre><code>public class Demo01 {
+
+    public static void main(String[] args) 
+        throws Exception {
+        /*
+         * 使用dom4j读取xml文件
+         */
+        SAXReader reader = new SAXReader();
+
+        //doc=reader.read(文件、文件流)
+        //Document doc=
+        //  reader.read(new File(&quot;books.xml&quot;));
+
+        FileInputStream in = 
+                new FileInputStream(&quot;books.xml&quot;);
+        Document doc = reader.read(in);
+        in.close();
+
+        System.out.println(doc.asXML());
+
+        //读取根元素, Root 根， Element元素
+        Element root = doc.getRootElement();
+        //输出根元素root中的内容
+        System.out.println(&quot;根元素：&quot;);
+        System.out.println(root.asXML()); 
+
+        //获取元素的全部子元素 
+        //这里是获取 root 元素的全部book子元素 
+        List&lt;Element&gt; list = root.elements();
+        System.out.println(&quot;根元素的全部子元素&quot;); 
+        //Iterator&lt;Element&gt; i = list.iterator();
+        //while(i.hasNext()) {
+        //  Element e = i.next();
+        //  System.out.println(e.asXML()); 
+        //}
+        for(Element e:list) {
+            System.out.println(e.asXML()); 
+        }
+
+        //获取一批指定名字的子元素
+        System.out.println(&quot;root的全部book子元素：&quot;); 
+        List&lt;Element&gt; list2 = root.elements(&quot;book&quot;);
+        for (Element e : list2) {
+            // e 是 &lt;book&gt; 元素
+            System.out.println(e.asXML());
+            //获取 book 元素的name子元素
+            Element name = e.element(&quot;name&quot;);
+            Element author = e.element(&quot;author&quot;);
+            System.out.println(name.asXML());
+            System.out.println(author.asXML());
+            //获取元素中的文本内容name.getText()
+            String s1 = name.getTextTrim();
+            String s2 = author.getTextTrim();
+            System.out.println(s1 + &quot;,&quot;+s2);
+        }
+
+        //读取元素的属性 
+        System.out.println(&quot;读取元素的属性：&quot;); 
+        for (Element book : list2) {
+            // attribute 属性， Value 值
+            //读取book元素的id属性值
+            String id = book.attributeValue(&quot;id&quot;);
+            //读取book元素的lang属性值
+            String lang = book.attributeValue(&quot;lang&quot;);
+            System.out.println(id+&quot;, &quot;+lang);
+        }
+
+    }
+
+}
+</code></pre>
+
+<h1>案例</h1>
+<p>读取 web.xml 文件中，文件后缀和文件类型信息</p>
+<ol>
+<li>
+<p>了解web.xml文件结构</p>
+<pre><code>&lt;web-app&gt;
+    &lt;servlet&gt;
+        &lt;!-- ... --&gt;
+    &lt;/serlvet&gt;
+    &lt;mime-mapping&gt;
+        &lt;extension&gt;rif&lt;/extension&gt;
+        &lt;mime-type&gt;application/reginfo+xml&lt;/mime-type&gt;
+    &lt;/mime-mapping&gt; 
+    &lt;mime-mapping&gt;
+        &lt;extension&gt;jpg&lt;/extension&gt;
+        &lt;mime-type&gt;image/jpeg&lt;/mime-type&gt;
+    &lt;/mime-mapping&gt;
+    &lt;!-- ... --&gt;
+&lt;/web-app&gt;
+</code></pre>
+
+</li>
+<li>
+<p>设计程序</p>
+<ol>
+<li>读取web.xml 为document</li>
+<li>获取根元素 web-app</li>
+<li>获取根元素中 mime-mapping 所有子元素</li>
+<li>
+遍历每个mime-mapping
+<ol>
+<li>获取 mime-mapping 的 extension 子元素，并获取子元素中的文本。</li>
+<li>获取 mime-mapping 的 mime-type 子元素，并获取子元素中的文本。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>代码：</p>
+<pre><code>public class Demo02 {
+
+    public static void main(String[] args) 
+        throws Exception{
+        /*
+         * 读取web.xml中存储的文件类型信息
+         * 
+         * 1. 读取web.xml 为document
+         * 2. 获取根元素 web-app
+         * 3. 获取根元素中 mime-mapping 所有子元素
+         * 4. 遍历每个mime-mapping
+         *      1. 获取 mime-mapping 的 extension 子元素，
+         *      并获取子元素中的文本。
+         *      2. 获取 mime-mapping 的 mime-type 子元素，
+         *      并获取子元素中的文本。
+         */
+
+        //读取web.xml文件为dom对象
+        SAXReader reader=new SAXReader();
+        Document doc = 
+                reader.read(new File(&quot;conf/web.xml&quot;));
+        //获取根元素 web-app
+        Element root=doc.getRootElement();
+        //获取全部 mime-mapping 子元素
+        List&lt;Element&gt; list=root.elements(&quot;mime-mapping&quot;);
+        System.out.println(&quot;list size:&quot;+list.size()); 
+        for(Element e:list) {
+            //e 是每个 mime-mapping 元素
+            //获取子元素并且直接读取子元素的文本内容
+            String ext=e.element(&quot;extension&quot;).getTextTrim();
+            //elementTextTrim直接获取子元素中文本
+            String type=e.elementTextTrim(&quot;mime-type&quot;);
+            //输出验证读取结果
+            System.out.println(ext+&quot;, &quot;+type); 
+        }
+    }
+
+}
+</code></pre>
+
+<h2>重构WebServer，初始化mimi_mapping</h2>
+<p>代码：</p>
+<pre><code>/**
+ * 初始化资源类型
+ * 读取conf/web.xml中资源类型列表，添加到mime_mapping中
+ * 可以解决大部分市面上常见文件类型与资源类型的映射关系
+ * 
+ * 异常处理原则：能处理尽量处理，处理不了抛出去
+ */
+private static void initMimeMapping() {
+    try {
+        SAXReader reader=new SAXReader();
+        Document doc = reader.read(
+            new File(&quot;conf/web.xml&quot;));
+        Element root=doc.getRootElement();
+        List&lt;Element&gt; list=
+                root.elements(&quot;mime-mapping&quot;);
+        for (Element e : list) {
+            String ext=e.elementTextTrim(&quot;extension&quot;);
+            String type=e.elementTextTrim(&quot;mime-type&quot;);
+            mime_mapping.put(ext, type);
+        }
+        //System.out.println(mime_mapping); 
+    }catch(Exception e) {
+        e.printStackTrace();
+        throw new RuntimeException(e);
+    }
+}
+</code></pre>
+
+<h1>XML 总结</h1>
+<ol>
+<li>
+XML 可扩展标记语言
+<ul>
+<li>统一了数据文件的格式！</li>
+<li>经常用于数据存储格式，数据交互格式，配置文件格式</li>
+</ul>
+</li>
+<li>
+dom4j
+<ul>
+<li>统一的访问API，大大简化编程</li>
+</ul>
+</li>
+</ol>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
